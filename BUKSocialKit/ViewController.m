@@ -19,7 +19,7 @@
     [super viewDidLoad];
     
     [[BUKSocialShareHelper sharedInstance] setWeiboAppKey:@"2454831345" appSecret:@"56f9b633b5821179b4ae702a82e7527a" url:@"http://www.baixing.com/a/mobile"];
-    
+    [[BUKSocialShareHelper sharedInstance] setQQWithAppId:@"1105039495" appKey:@"2fuWb4qrmezq72yv" url:@"http://www.baixing.com/a/mobile"];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -36,6 +36,15 @@
 - (IBAction)shareToWeibo:(id)sender {
     BUKSocialData *data = [[BUKSocialData alloc] initWithTitle:@"123" content:@"很多思考和看见伤口的健康" image:[UIImage imageNamed:@"sample"]];
     BUKSocialShareManager *manager = [BUKSocialShareManager managerWithType:BUKSocialShareTypeWeibo];
+    [manager shareData:data withCompletionHandler:^(BUKSocialShareResultCode code) {
+        NSLog(@"%@",@(code));
+    }];
+}
+
+
+- (IBAction)shareToQQ:(id)sender {
+    BUKSocialData *data = [[BUKSocialData alloc] initWithTitle:@"123" content:@"很多思考和看见伤口的健康" image:[UIImage imageNamed:@"sample"]];
+    BUKSocialShareManager *manager = [BUKSocialShareManager managerWithType:BUKSocialShareTypeQQ];
     [manager shareData:data withCompletionHandler:^(BUKSocialShareResultCode code) {
         NSLog(@"%@",@(code));
     }];

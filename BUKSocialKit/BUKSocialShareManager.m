@@ -8,6 +8,7 @@
 
 #import "BUKSocialShareManager.h"
 #import "BUKSocialShareWeiboManager.h"
+#import "BUKSocialShareQQManager.h"
 #import "BUKSocialData.h"
 
 @interface BUKSocialShareManager ()
@@ -26,7 +27,9 @@
             case BUKSocialShareTypeWeibo:
                 _sharedInstance = [[BUKSocialShareWeiboManager alloc] init];
                 break;
-                
+            case BUKSocialShareTypeQQ:
+                _sharedInstance = [[BUKSocialShareQQManager alloc] init];
+                break;
             default:
                 break;
         }
@@ -41,7 +44,7 @@
 
 - (void)shareData:(BUKSocialData *)data withCompletionHandler:(BUKSocialShareCompletionHandler)handler
 {
-
+    self.handler = handler;
 }
 
 @end

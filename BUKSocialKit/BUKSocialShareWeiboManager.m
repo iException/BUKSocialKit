@@ -18,6 +18,8 @@
 
 - (void)shareData:(BUKSocialData *)data withCompletionHandler:(BUKSocialShareCompletionHandler)handler
 {
+    [super shareData:data withCompletionHandler:handler];
+    
     WBAuthorizeRequest *request = [WBAuthorizeRequest request];
     request.redirectURI = [[BUKSocialShareHelper sharedInstance] weiboCallbackUrl];
     request.scope = @"all";

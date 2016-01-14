@@ -32,6 +32,9 @@
 		630CFCF11C47ABC900BEBD59 /* WeiboSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 630CFCF01C47ABC900BEBD59 /* WeiboSDK.bundle */; };
 		630CFCFB1C47CA0800BEBD59 /* TencentOpenApi_IOS_Bundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 630CFCF91C47CA0800BEBD59 /* TencentOpenApi_IOS_Bundle.bundle */; };
 		630CFCFC1C47CA0800BEBD59 /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 630CFCFA1C47CA0800BEBD59 /* TencentOpenAPI.framework */; };
+		630CFCFF1C47CBB300BEBD59 /* BUKSocialShareQQManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 630CFCFE1C47CBB300BEBD59 /* BUKSocialShareQQManager.m */; };
+		630CFD011C47CC6500BEBD59 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 630CFD001C47CC6500BEBD59 /* libiconv.tbd */; };
+		630CFD031C47CC7500BEBD59 /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 630CFD021C47CC7500BEBD59 /* libstdc++.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +72,10 @@
 		630CFCF01C47ABC900BEBD59 /* WeiboSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = WeiboSDK.bundle; path = libWeiboSDK/WeiboSDK.bundle; sourceTree = "<group>"; };
 		630CFCF91C47CA0800BEBD59 /* TencentOpenApi_IOS_Bundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TencentOpenApi_IOS_Bundle.bundle; sourceTree = "<group>"; };
 		630CFCFA1C47CA0800BEBD59 /* TencentOpenAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TencentOpenAPI.framework; sourceTree = "<group>"; };
+		630CFCFD1C47CBB300BEBD59 /* BUKSocialShareQQManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BUKSocialShareQQManager.h; sourceTree = "<group>"; };
+		630CFCFE1C47CBB300BEBD59 /* BUKSocialShareQQManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BUKSocialShareQQManager.m; sourceTree = "<group>"; };
+		630CFD001C47CC6500BEBD59 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
+		630CFD021C47CC7500BEBD59 /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +83,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				630CFD031C47CC7500BEBD59 /* libstdc++.tbd in Frameworks */,
+				630CFD011C47CC6500BEBD59 /* libiconv.tbd in Frameworks */,
 				630CFCEF1C47A80E00BEBD59 /* libWeiboSDK.a in Frameworks */,
 				630CFCEC1C47A7D000BEBD59 /* CoreGraphics.framework in Frameworks */,
 				630CFCEA1C47A78600BEBD59 /* libsqlite3.tbd in Frameworks */,
@@ -129,6 +138,8 @@
 		630CFCAE1C476CD400BEBD59 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				630CFD021C47CC7500BEBD59 /* libstdc++.tbd */,
+				630CFD001C47CC6500BEBD59 /* libiconv.tbd */,
 				630CFCF01C47ABC900BEBD59 /* WeiboSDK.bundle */,
 				630CFCEB1C47A7D000BEBD59 /* CoreGraphics.framework */,
 				630CFCED1C47A7E300BEBD59 /* libWeiboSDK.a */,
@@ -158,6 +169,8 @@
 				630CFCCE1C477D4500BEBD59 /* BUKSocialShareManager.m */,
 				630CFCD31C47866800BEBD59 /* BUKSocialShareWeiboManager.h */,
 				630CFCD41C47866800BEBD59 /* BUKSocialShareWeiboManager.m */,
+				630CFCFD1C47CBB300BEBD59 /* BUKSocialShareQQManager.h */,
+				630CFCFE1C47CBB300BEBD59 /* BUKSocialShareQQManager.m */,
 				630CFCD61C478C8B00BEBD59 /* BUKSocialShareHelper.h */,
 				630CFCD71C478C8B00BEBD59 /* BUKSocialShareHelper.m */,
 			);
@@ -248,6 +261,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				630CFCB61C476CD400BEBD59 /* ViewController.m in Sources */,
+				630CFCFF1C47CBB300BEBD59 /* BUKSocialShareQQManager.m in Sources */,
 				630CFCCF1C477D4500BEBD59 /* BUKSocialShareManager.m in Sources */,
 				630CFCD81C478C8B00BEBD59 /* BUKSocialShareHelper.m in Sources */,
 				630CFCCB1C4773FE00BEBD59 /* BUKSocialData.m in Sources */,
@@ -373,7 +387,10 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/BUKSocialKit/libWeiboSDK",
 				);
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-fobjc-arc",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.baixing.lazy.BUKSocialKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -393,7 +410,10 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/BUKSocialKit/libWeiboSDK",
 				);
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-fobjc-arc",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.baixing.lazy.BUKSocialKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

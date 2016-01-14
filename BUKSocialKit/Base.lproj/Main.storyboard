@@ -24,11 +24,20 @@
                                     <action selector="shareToWeibo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4CX-gX-hEp"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NF3-OS-Hsm">
+                                <rect key="frame" x="266" y="145" width="68" height="30"/>
+                                <state key="normal" title="分享到QQ"/>
+                                <connections>
+                                    <action selector="shareToQQ:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mCH-rV-RGG"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="RP4-ox-RBV" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="52" id="0tz-mA-Fhu"/>
+                            <constraint firstItem="NF3-OS-Hsm" firstAttribute="centerX" secondItem="RP4-ox-RBV" secondAttribute="centerX" id="0w6-Ow-2x5"/>
                             <constraint firstItem="RP4-ox-RBV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Raj-bd-eTe"/>
+                            <constraint firstItem="NF3-OS-Hsm" firstAttribute="top" secondItem="RP4-ox-RBV" secondAttribute="bottom" constant="43" id="eQj-E7-yB4"/>
                         </constraints>
                     </view>
                 </viewController>
