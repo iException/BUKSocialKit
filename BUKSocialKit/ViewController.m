@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "BUKSocialKit.h"
 
 @interface ViewController ()
 
@@ -16,12 +17,27 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [[BUKSocialShareHelper sharedInstance] setWeiboAppKey:@"2454831345" appSecret:@"56f9b633b5821179b4ae702a82e7527a" url:@"http://www.baixing.com/a/mobile"];
+    
     // Do any additional setup after loading the view, typically from a nib.
+}
+
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)shareToWeibo:(id)sender {
+    BUKSocialData *data = [[BUKSocialData alloc] initWithTitle:@"123" content:@"很多思考和看见伤口的健康" image:[UIImage imageNamed:@"sample"]];
+    BUKSocialShareManager *manager = [BUKSocialShareManager managerWithType:BUKSocialShareTypeWeibo];
+    [manager shareData:data withCompletionHandler:^(BUKSocialShareResultCode code) {
+        NSLog(@"%@",@(code));
+    }];
+}
 @end
