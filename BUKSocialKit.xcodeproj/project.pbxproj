@@ -41,6 +41,7 @@
 		63C7F5421C48CF220070962A /* 28.png in Resources */ = {isa = PBXBuildFile; fileRef = 63C7F5411C48CF220070962A /* 28.png */; };
 		63C7F5461C48D0F90070962A /* UIImage+ImageCompress.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C7F5451C48D0F90070962A /* UIImage+ImageCompress.m */; };
 		63C7F5491C48D1BB0070962A /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C7F5481C48D1BB0070962A /* UIImage+Resize.m */; };
+		63C7F54C1C48D6A20070962A /* BUKSocialShareWeChatTimelineManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C7F54B1C48D6A20070962A /* BUKSocialShareWeChatTimelineManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -107,6 +108,8 @@
 		63C7F5451C48D0F90070962A /* UIImage+ImageCompress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageCompress.m"; sourceTree = "<group>"; };
 		63C7F5471C48D1BB0070962A /* UIImage+Resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Resize.h"; sourceTree = "<group>"; };
 		63C7F5481C48D1BB0070962A /* UIImage+Resize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Resize.m"; sourceTree = "<group>"; };
+		63C7F54A1C48D6A20070962A /* BUKSocialShareWeChatTimelineManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BUKSocialShareWeChatTimelineManager.h; sourceTree = "<group>"; };
+		63C7F54B1C48D6A20070962A /* BUKSocialShareWeChatTimelineManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BUKSocialShareWeChatTimelineManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -211,6 +214,8 @@
 				630CFD051C48882E00BEBD59 /* BUKSocialShareQzoneManager.m */,
 				63C7F5341C48BBC90070962A /* BUKSocialShareWechatFriendManager.h */,
 				63C7F5351C48BBC90070962A /* BUKSocialShareWechatFriendManager.m */,
+				63C7F54A1C48D6A20070962A /* BUKSocialShareWeChatTimelineManager.h */,
+				63C7F54B1C48D6A20070962A /* BUKSocialShareWeChatTimelineManager.m */,
 				630CFCD61C478C8B00BEBD59 /* BUKSocialShareHelper.h */,
 				630CFCD71C478C8B00BEBD59 /* BUKSocialShareHelper.m */,
 			);
@@ -346,6 +351,7 @@
 				63C7F5461C48D0F90070962A /* UIImage+ImageCompress.m in Sources */,
 				63C7F5361C48BBC90070962A /* BUKSocialShareWechatFriendManager.m in Sources */,
 				630CFCFF1C47CBB300BEBD59 /* BUKSocialShareQQManager.m in Sources */,
+				63C7F54C1C48D6A20070962A /* BUKSocialShareWeChatTimelineManager.m in Sources */,
 				630CFCCF1C477D4500BEBD59 /* BUKSocialShareManager.m in Sources */,
 				63C7F5491C48D1BB0070962A /* UIImage+Resize.m in Sources */,
 				630CFCD81C478C8B00BEBD59 /* BUKSocialShareHelper.m in Sources */,

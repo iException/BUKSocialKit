@@ -35,7 +35,7 @@
 }
 
 - (IBAction)shareToWeibo:(id)sender {
-    BUKSocialData *data = [[BUKSocialData alloc] initWithTitle:@"123" content:@"很多思考和看见伤口的健康" url:nil image:[UIImage imageNamed:@"sample"]];
+    BUKSocialData *data = [[BUKSocialData alloc] initWithTitle:@"123" content:@"很多思考和看见伤口的健康" url:@"http://www.baixing.com" image:[UIImage imageNamed:@"sample"]];
     BUKSocialShareManager *manager = [BUKSocialShareManager managerWithType:BUKSocialShareTypeWeibo];
     [manager shareData:data withCompletionHandler:^(BUKSocialShareResultCode code) {
         NSLog(@"%@",@(code));

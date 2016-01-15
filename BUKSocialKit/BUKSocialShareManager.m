@@ -11,6 +11,7 @@
 #import "BUKSocialShareQQManager.h"
 #import "BUKSocialShareQzoneManager.h"
 #import "BUKSocialShareWechatFriendManager.h"
+#import "BUKSocialShareWeChatTimelineManager.h"
 #import "BUKSocialData.h"
 
 @interface BUKSocialShareManager ()
@@ -35,6 +36,9 @@
             break;
         case BUKSocialShareTypeWechatFriend:
             manager = [[BUKSocialShareWechatFriendManager alloc] init];
+            break;
+        case BUKSocialShareTypeWechatTimeline:
+            manager = [[BUKSocialShareWeChatTimelineManager alloc] init];
             break;
         default:
             break;

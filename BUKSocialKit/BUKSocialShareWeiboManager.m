@@ -7,14 +7,18 @@
 //
 
 #import "BUKSocialShareWeiboManager.h"
-#import "WeiboSDK.h"
 #import "BUKSocialShareHelper.h"
+#import "UIImage+Resize.h"
+#import "WeiboSDK.h"
 
 @interface BUKSocialShareWeiboManager () <WeiboSDKDelegate>
 
 @end
 
 @implementation BUKSocialShareWeiboManager
+
+static const CGFloat kThumbnailWidth = 120.0f;
+static const CGFloat kThumbnailHeight = 160.0f;
 
 - (void)shareData:(BUKSocialData *)data withCompletionHandler:(BUKSocialShareCompletionHandler)handler
 {
@@ -26,9 +30,21 @@
     
     WBMessageObject *message = [[WBMessageObject alloc] init];
     message.text = data.content;
-    WBImageObject *image = [[WBImageObject alloc] init];
-    image.imageData = UIImagePNGRepresentation(data.image);
-    message.imageObject = image;
+    
+    if (data.url) {
+        WBWebpageObject *webPage = [WBWebpageObject object];
+        webPage.objectID = data.title;
+        webPage.webpageUrl = data.url;
+        webPage.title = data.title;
+        webPage.description = data.content;
+        webPage.thumbnailData = UIImagePNGRepresentation([data.image resizedImageToSize:CGSizeMake(kThumbnailWidth, kThumbnailHeight)]);
+        message.mediaObject = webPage;
+    } else {
+        WBImageObject *image = [WBImageObject object];
+        image.imageData = UIImagePNGRepresentation(data.image);
+        message.imageObject = image;
+    }
+    
     
     WBSendMessageToWeiboRequest *sendRequest = [WBSendMessageToWeiboRequest requestWithMessage:message authInfo:request access_token:nil];
     [WeiboSDK sendRequest:sendRequest];
