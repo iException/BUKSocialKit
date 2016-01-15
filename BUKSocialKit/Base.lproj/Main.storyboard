@@ -38,15 +38,33 @@
                                     <action selector="shareToQzone:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pgh-Nm-hJs"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cXa-Iz-gMI">
+                                <rect key="frame" x="248" y="270" width="105" height="30"/>
+                                <state key="normal" title="分享到微信好友"/>
+                                <connections>
+                                    <action selector="shareToWeChat:" destination="BYZ-38-t0r" eventType="touchUpInside" id="e4p-Ze-0uV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="74d-kP-iEl">
+                                <rect key="frame" x="241" y="323" width="120" height="30"/>
+                                <state key="normal" title="分享到微信朋友圈"/>
+                                <connections>
+                                    <action selector="shareToWeChatTimeLine:" destination="BYZ-38-t0r" eventType="touchUpInside" id="e6U-03-oes"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="RP4-ox-RBV" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="52" id="0tz-mA-Fhu"/>
                             <constraint firstItem="NF3-OS-Hsm" firstAttribute="centerX" secondItem="RP4-ox-RBV" secondAttribute="centerX" id="0w6-Ow-2x5"/>
+                            <constraint firstItem="cXa-Iz-gMI" firstAttribute="centerX" secondItem="Gib-nu-YSV" secondAttribute="centerX" id="Fml-Vw-ejI"/>
                             <constraint firstItem="Gib-nu-YSV" firstAttribute="top" secondItem="NF3-OS-Hsm" secondAttribute="bottom" constant="36" id="Q3J-rR-1pw"/>
                             <constraint firstItem="RP4-ox-RBV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Raj-bd-eTe"/>
+                            <constraint firstItem="74d-kP-iEl" firstAttribute="centerX" secondItem="cXa-Iz-gMI" secondAttribute="centerX" id="af9-eN-Hzq"/>
                             <constraint firstItem="NF3-OS-Hsm" firstAttribute="top" secondItem="RP4-ox-RBV" secondAttribute="bottom" constant="43" id="eQj-E7-yB4"/>
+                            <constraint firstItem="74d-kP-iEl" firstAttribute="top" secondItem="cXa-Iz-gMI" secondAttribute="bottom" constant="23" id="jCS-xw-8f8"/>
                             <constraint firstItem="Gib-nu-YSV" firstAttribute="centerX" secondItem="NF3-OS-Hsm" secondAttribute="centerX" id="ulE-Mh-dlV"/>
+                            <constraint firstItem="cXa-Iz-gMI" firstAttribute="top" secondItem="Gib-nu-YSV" secondAttribute="bottom" constant="29" id="xVG-9r-JCX"/>
                         </constraints>
                     </view>
                 </viewController>

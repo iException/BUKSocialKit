@@ -38,5 +38,6 @@ typedef void (^BUKSocialShareCompletionHandler)(BUKSocialShareResultCode code);
 + (BUKSocialShareManager *)managerWithType:(BUKSocialShareType)type;
 
 - (void)shareData:(BUKSocialData *)data withCompletionHandler:(BUKSocialShareCompletionHandler)handler;
+- (BOOL)handleOpenURL:(NSURL *)url;
 
 @end

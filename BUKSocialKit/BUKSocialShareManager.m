@@ -10,6 +10,7 @@
 #import "BUKSocialShareWeiboManager.h"
 #import "BUKSocialShareQQManager.h"
 #import "BUKSocialShareQzoneManager.h"
+#import "BUKSocialShareWechatFriendManager.h"
 #import "BUKSocialData.h"
 
 @interface BUKSocialShareManager ()
@@ -32,6 +33,9 @@
         case BUKSocialShareTypeQQZone:
             manager = [[BUKSocialShareQzoneManager alloc] init];
             break;
+        case BUKSocialShareTypeWechatFriend:
+            manager = [[BUKSocialShareWechatFriendManager alloc] init];
+            break;
         default:
             break;
     }
@@ -39,13 +43,16 @@
     return manager;
 }
 
-
-
 #pragma mark - private -
 
 - (void)shareData:(BUKSocialData *)data withCompletionHandler:(BUKSocialShareCompletionHandler)handler
 {
     self.handler = handler;
+}
+
+- (BOOL)handleOpenURL:(NSURL *)url
+{
+    return YES;
 }
 
 @end

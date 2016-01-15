@@ -36,6 +36,11 @@
 		630CFD061C48882E00BEBD59 /* BUKSocialShareQzoneManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 630CFD051C48882E00BEBD59 /* BUKSocialShareQzoneManager.m */; };
 		63C7F5311C48A22D0070962A /* libWeiboSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 63C7F5251C48A22D0070962A /* libWeiboSDK.a */; };
 		63C7F5321C48A22D0070962A /* WeiboSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 63C7F52E1C48A22D0070962A /* WeiboSDK.bundle */; };
+		63C7F5361C48BBC90070962A /* BUKSocialShareWechatFriendManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C7F5351C48BBC90070962A /* BUKSocialShareWechatFriendManager.m */; };
+		63C7F53B1C48BC390070962A /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 63C7F5371C48BC390070962A /* libWeChatSDK.a */; };
+		63C7F5421C48CF220070962A /* 28.png in Resources */ = {isa = PBXBuildFile; fileRef = 63C7F5411C48CF220070962A /* 28.png */; };
+		63C7F5461C48D0F90070962A /* UIImage+ImageCompress.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C7F5451C48D0F90070962A /* UIImage+ImageCompress.m */; };
+		63C7F5491C48D1BB0070962A /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C7F5481C48D1BB0070962A /* UIImage+Resize.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -91,6 +96,17 @@
 		63C7F52F1C48A22D0070962A /* WeiboSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboSDK.h; sourceTree = "<group>"; };
 		63C7F5301C48A22D0070962A /* WeiboUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboUser.h; sourceTree = "<group>"; };
 		63C7F5331C48A25D0070962A /* WeiboSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = WeiboSDK.bundle; sourceTree = "<group>"; };
+		63C7F5341C48BBC90070962A /* BUKSocialShareWechatFriendManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BUKSocialShareWechatFriendManager.h; sourceTree = "<group>"; };
+		63C7F5351C48BBC90070962A /* BUKSocialShareWechatFriendManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BUKSocialShareWechatFriendManager.m; sourceTree = "<group>"; };
+		63C7F5371C48BC390070962A /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
+		63C7F5381C48BC390070962A /* WechatAuthSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WechatAuthSDK.h; sourceTree = "<group>"; };
+		63C7F5391C48BC390070962A /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
+		63C7F53A1C48BC390070962A /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
+		63C7F5411C48CF220070962A /* 28.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 28.png; sourceTree = "<group>"; };
+		63C7F5441C48D0F90070962A /* UIImage+ImageCompress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageCompress.h"; sourceTree = "<group>"; };
+		63C7F5451C48D0F90070962A /* UIImage+ImageCompress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageCompress.m"; sourceTree = "<group>"; };
+		63C7F5471C48D1BB0070962A /* UIImage+Resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Resize.h"; sourceTree = "<group>"; };
+		63C7F5481C48D1BB0070962A /* UIImage+Resize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Resize.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +128,7 @@
 				630CFCFC1C47CA0800BEBD59 /* TencentOpenAPI.framework in Frameworks */,
 				630CFCDE1C47A75B00BEBD59 /* ImageIO.framework in Frameworks */,
 				630CFCDC1C47A75600BEBD59 /* QuartzCore.framework in Frameworks */,
+				63C7F53B1C48BC390070962A /* libWeChatSDK.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,6 +171,7 @@
 		630CFCAE1C476CD400BEBD59 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				63C7F5411C48CF220070962A /* 28.png */,
 				630CFD021C47CC7500BEBD59 /* libstdc++.tbd */,
 				630CFD001C47CC6500BEBD59 /* libiconv.tbd */,
 				630CFCF01C47ABC900BEBD59 /* WeiboSDK.bundle */,
@@ -176,6 +194,7 @@
 		630CFCC51C476E1900BEBD59 /* SDK */ = {
 			isa = PBXGroup;
 			children = (
+				63C7F5431C48D0EF0070962A /* Vendor */,
 				63C7F5161C48A1C10070962A /* Weibo */,
 				63C7F5141C48A13D0070962A /* WeChat */,
 				630CFCF81C47C9F800BEBD59 /* QQ */,
@@ -190,6 +209,8 @@
 				630CFCFE1C47CBB300BEBD59 /* BUKSocialShareQQManager.m */,
 				630CFD041C48882E00BEBD59 /* BUKSocialShareQzoneManager.h */,
 				630CFD051C48882E00BEBD59 /* BUKSocialShareQzoneManager.m */,
+				63C7F5341C48BBC90070962A /* BUKSocialShareWechatFriendManager.h */,
+				63C7F5351C48BBC90070962A /* BUKSocialShareWechatFriendManager.m */,
 				630CFCD61C478C8B00BEBD59 /* BUKSocialShareHelper.h */,
 				630CFCD71C478C8B00BEBD59 /* BUKSocialShareHelper.m */,
 			);
@@ -208,6 +229,10 @@
 		63C7F5141C48A13D0070962A /* WeChat */ = {
 			isa = PBXGroup;
 			children = (
+				63C7F5371C48BC390070962A /* libWeChatSDK.a */,
+				63C7F5381C48BC390070962A /* WechatAuthSDK.h */,
+				63C7F5391C48BC390070962A /* WXApi.h */,
+				63C7F53A1C48BC390070962A /* WXApiObject.h */,
 			);
 			name = WeChat;
 			sourceTree = "<group>";
@@ -230,6 +255,17 @@
 				63C7F5301C48A22D0070962A /* WeiboUser.h */,
 			);
 			name = Weibo;
+			sourceTree = "<group>";
+		};
+		63C7F5431C48D0EF0070962A /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				63C7F5471C48D1BB0070962A /* UIImage+Resize.h */,
+				63C7F5481C48D1BB0070962A /* UIImage+Resize.m */,
+				63C7F5441C48D0F90070962A /* UIImage+ImageCompress.h */,
+				63C7F5451C48D0F90070962A /* UIImage+ImageCompress.m */,
+			);
+			name = Vendor;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,6 +329,7 @@
 				630CFCDA1C47A60500BEBD59 /* sample.png in Resources */,
 				630CFCBE1C476CD400BEBD59 /* LaunchScreen.storyboard in Resources */,
 				630CFCBB1C476CD400BEBD59 /* Assets.xcassets in Resources */,
+				63C7F5421C48CF220070962A /* 28.png in Resources */,
 				630CFCFB1C47CA0800BEBD59 /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
 				630CFCB91C476CD400BEBD59 /* Main.storyboard in Resources */,
 			);
@@ -306,8 +343,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				630CFCB61C476CD400BEBD59 /* ViewController.m in Sources */,
+				63C7F5461C48D0F90070962A /* UIImage+ImageCompress.m in Sources */,
+				63C7F5361C48BBC90070962A /* BUKSocialShareWechatFriendManager.m in Sources */,
 				630CFCFF1C47CBB300BEBD59 /* BUKSocialShareQQManager.m in Sources */,
 				630CFCCF1C477D4500BEBD59 /* BUKSocialShareManager.m in Sources */,
+				63C7F5491C48D1BB0070962A /* UIImage+Resize.m in Sources */,
 				630CFCD81C478C8B00BEBD59 /* BUKSocialShareHelper.m in Sources */,
 				630CFCCB1C4773FE00BEBD59 /* BUKSocialData.m in Sources */,
 				630CFCB31C476CD400BEBD59 /* AppDelegate.m in Sources */,
@@ -430,10 +470,8 @@
 				INFOPLIST_FILE = BUKSocialKit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/BUKSocialKit/libWeiboSDK",
-					"$(PROJECT_DIR)/BUKSocialKit/Weibo",
-					"$(PROJECT_DIR)/BUKSocialKit",
+					"$(inherited)/**",
+					"$(PROJECT_DIR)/BUKSocialKit/**",
 				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
@@ -455,10 +493,8 @@
 				INFOPLIST_FILE = BUKSocialKit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/BUKSocialKit/libWeiboSDK",
-					"$(PROJECT_DIR)/BUKSocialKit/Weibo",
-					"$(PROJECT_DIR)/BUKSocialKit",
+					"$(inherited)/**",
+					"$(PROJECT_DIR)/BUKSocialKit/**",
 				);
 				OTHER_LDFLAGS = (
 					"-ObjC",

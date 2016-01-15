@@ -7,7 +7,9 @@
 //
 
 #import "BUKSocialShareHelper.h"
+#import "BUKSocialShareManager.h"
 #import "WeiboSDK.h"
+#import "WXApi.h"
 
 @interface BUKSocialShareHelper ()
 
@@ -65,16 +67,15 @@
     self.wxAppId = appId;
     self.wxAppSecret = appSecret;
     self.wxCallbackUrl = url;
+    
+    [WXApi registerApp:appId];
 }
 
 #pragma mark - private -
 
 - (BOOL)handleOpenURL:(NSURL *)url
 {
-    if ([[UIApplication sharedApplication] canOpenURL:url]) {
-        return [[UIApplication sharedApplication] openURL:url];
-    }
-    return NO;
+    return [[self manager] handleOpenURL:url];
 }
 
 @end

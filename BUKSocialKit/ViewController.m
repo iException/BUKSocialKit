@@ -20,6 +20,7 @@
     
     [[BUKSocialShareHelper sharedInstance] setWeiboAppKey:@"2454831345" appSecret:@"56f9b633b5821179b4ae702a82e7527a" url:@"http://www.baixing.com/a/mobile"];
     [[BUKSocialShareHelper sharedInstance] setQQWithAppId:@"1105039495" appKey:@"2fuWb4qrmezq72yv" url:@"http://www.baixing.com/a/mobile"];
+    [[BUKSocialShareHelper sharedInstance] setWXAppId:@"wxad9d46bc30040c71" appSecret:@"a59c72c189e0a2560fdf24cf2a2d1a50" url:@"http://www.baixing.com/a/mobile"];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -53,6 +54,23 @@
 - (IBAction)shareToQzone:(id)sender {
     BUKSocialData *data = [[BUKSocialData alloc] initWithTitle:@"123" content:@"非得说开了房间快乐撒进来看" url:@"http://baixing.com" image:[UIImage imageNamed:@"sample"]];
     BUKSocialShareManager *manager = [BUKSocialShareManager managerWithType:BUKSocialShareTypeQQZone];
+    [manager shareData:data withCompletionHandler:^(BUKSocialShareResultCode code) {
+        NSLog(@"%@",@(code));
+    }];
+}
+
+- (IBAction)shareToWeChat:(id)sender {
+    BUKSocialData *data = [[BUKSocialData alloc] initWithTitle:@"123" content:@"非得说开了房间快乐撒进来看" url:@"http://baixing.com" image:[UIImage imageNamed:@"sample"]];
+    BUKSocialShareManager *manager = [BUKSocialShareManager managerWithType:BUKSocialShareTypeWechatFriend];
+    [manager shareData:data withCompletionHandler:^(BUKSocialShareResultCode code) {
+        NSLog(@"%@",@(code));
+    }];
+}
+
+
+- (IBAction)shareToWeChatTimeLine:(id)sender {
+    BUKSocialData *data = [[BUKSocialData alloc] initWithTitle:@"123" content:@"非得说开了房间快乐撒进来看" url:@"http://baixing.com" image:[UIImage imageNamed:@"sample"]];
+    BUKSocialShareManager *manager = [BUKSocialShareManager managerWithType:BUKSocialShareTypeWechatTimeline];
     [manager shareData:data withCompletionHandler:^(BUKSocialShareResultCode code) {
         NSLog(@"%@",@(code));
     }];

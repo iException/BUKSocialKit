@@ -23,9 +23,9 @@
 - (void)shareData:(BUKSocialData *)data withCompletionHandler:(BUKSocialShareCompletionHandler)handler
 {
     [super shareData:data withCompletionHandler:handler];
-   
-    self.oAuth = [[TencentOAuth alloc] initWithAppId:[[BUKSocialShareHelper sharedInstance] qqAppId] andDelegate:self];
 
+    self.oAuth = [[TencentOAuth alloc] initWithAppId:[[BUKSocialShareHelper sharedInstance] qqAppId] andDelegate:self];
+    
     QQApiObject *object = nil;
     if (data.url) {
         object = [QQApiURLObject objectWithURL:[NSURL URLWithString:data.url] title:data.title description:data.content previewImageData:UIImagePNGRepresentation(data.image) targetContentType:QQApiURLTargetTypeNews];
@@ -36,6 +36,11 @@
     SendMessageToQQReq* req = [SendMessageToQQReq reqWithContent:object];
     QQApiSendResultCode sent = [QQApiInterface sendReq:req];
     [self handleRequest:sent];
+}
+
+- (BOOL)handleOpenURL:(NSURL *)url
+{
+    return [TencentOAuth HandleOpenURL:url];
 }
 
 - (void)handleRequest:(QQApiSendResultCode)sent
@@ -72,7 +77,7 @@
     self.handler(code);
 }
 
-#pragma mark - TencentLoginDelegate
+#pragma mark - TencentSessionDelegate
 
 - (void)tencentDidLogin
 {

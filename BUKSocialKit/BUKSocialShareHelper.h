@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+@class BUKSocialShareManager;
+
 @interface BUKSocialShareHelper : NSObject
 
 + (instancetype)sharedInstance;
@@ -28,5 +30,7 @@
 @property (nonatomic, copy, readonly) NSString *weiboAppId;
 @property (nonatomic, copy, readonly) NSString *weiboAppSecret;
 @property (nonatomic, copy, readonly) NSString *weiboCallbackUrl;
+
+@property (nonatomic, strong) BUKSocialShareManager *manager;
 
 @end

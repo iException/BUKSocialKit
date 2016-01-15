@@ -40,6 +40,11 @@
     [self handleRequest:sent];
 }
 
+- (BOOL)handleOpenURL:(NSURL *)url
+{
+    return [TencentOAuth HandleOpenURL:url];
+}
+
 - (void)handleRequest:(QQApiSendResultCode)sent
 {
     BUKSocialShareResultCode code;
@@ -69,10 +74,10 @@
             code = BUKSocialShareResultCodeFaild;
             break;
         case EQQAPIQZONENOTSUPPORTTEXT:
-            code = BUKSocialShareResultCodeContentNotSupported;
+            code = BUKSocialShareResultCodeNoApiAuthority;
             break;
         case EQQAPIQZONENOTSUPPORTIMAGE:
-            code = BUKSocialShareResultCodeContentNotSupported;
+            code = BUKSocialShareResultCodeNoApiAuthority;
             break;
         default:
             break;
@@ -80,7 +85,7 @@
     self.handler(code);
 }
 
-#pragma mark - TencentLoginDelegate
+#pragma mark - TencentSessionDelegate
 
 - (void)tencentDidLogin
 {

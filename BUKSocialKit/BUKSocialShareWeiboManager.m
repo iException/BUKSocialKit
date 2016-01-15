@@ -34,6 +34,11 @@
     [WeiboSDK sendRequest:sendRequest];
 }
 
+- (BOOL)handleOpenURL:(NSURL *)url
+{
+    return [WeiboSDK handleOpenURL:url delegate:self];
+}
+
 #pragma mark - WeiboSDKDelegate
 
 - (void)didReceiveWeiboResponse:(WBBaseResponse *)response
