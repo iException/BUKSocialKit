@@ -63,7 +63,7 @@ static const CGFloat kThumbnailHeight = 160.0f;
 - (void)onResp:(BaseResp *)resp
 {
     enum WXErrCode errCode = resp.errCode;
-    BUKSocialShareResultCode code;
+    BUKSocialShareResultCode code = BUKSocialShareResultCodeSuccess;
     switch (errCode) {
         case WXSuccess:
             code = BUKSocialShareResultCodeSuccess;
@@ -84,6 +84,7 @@ static const CGFloat kThumbnailHeight = 160.0f;
             code = BUKSocialShareResultCodeContentNotSupported;
             break;
         default:
+            code = BUKSocialShareResultCodeFaild;
             break;
     }
     self.handler(code);

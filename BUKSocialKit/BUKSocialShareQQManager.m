@@ -50,7 +50,7 @@
 
 - (void)handleRequest:(QQApiSendResultCode)sent
 {
-    BUKSocialShareResultCode code;
+    BUKSocialShareResultCode code = BUKSocialShareResultCodeSuccess;
     switch (sent) {
         case EQQAPISENDSUCESS:
             code = BUKSocialShareResultCodeSuccess;
@@ -83,6 +83,7 @@
             code = BUKSocialShareResultCodeNoApiAuthority;
             break;
         default:
+            code = BUKSocialShareResultCodeFaild;
             break;
     }
     self.handler(code);

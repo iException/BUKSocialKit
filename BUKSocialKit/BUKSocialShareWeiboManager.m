@@ -60,7 +60,7 @@ static const CGFloat kThumbnailHeight = 160.0f;
 - (void)didReceiveWeiboResponse:(WBBaseResponse *)response
 {
     if ([response isKindOfClass:WBSendMessageToWeiboResponse.class] || [response isKindOfClass:[WBAuthorizeResponse class]]) {
-        BUKSocialShareResultCode code;
+        BUKSocialShareResultCode code = BUKSocialShareResultCodeSuccess;
         switch (response.statusCode) {
             case WeiboSDKResponseStatusCodeSuccess:
                 code = BUKSocialShareResultCodeSuccess;
@@ -90,6 +90,7 @@ static const CGFloat kThumbnailHeight = 160.0f;
                 code = BUKSocialShareResultCodeFaild;
                 break;
             default:
+                code = BUKSocialShareResultCodeFaild;
                 break;
         }
         self.handler(code);
