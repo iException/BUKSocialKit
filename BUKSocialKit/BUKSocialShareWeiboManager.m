@@ -59,7 +59,7 @@ static const CGFloat kThumbnailHeight = 160.0f;
 
 - (void)didReceiveWeiboResponse:(WBBaseResponse *)response
 {
-    if ([response isKindOfClass:WBSendMessageToWeiboResponse.class]) {
+    if ([response isKindOfClass:WBSendMessageToWeiboResponse.class] || [response isKindOfClass:[WBAuthorizeResponse class]]) {
         BUKSocialShareResultCode code;
         switch (response.statusCode) {
             case WeiboSDKResponseStatusCodeSuccess:

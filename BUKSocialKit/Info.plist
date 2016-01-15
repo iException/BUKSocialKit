@@ -80,6 +80,7 @@
 		<string>mqqOpensdkSSoLogin</string>
 		<string>mqzone</string>
 		<string>tencent</string>
+		<string>weixin</string>
 	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>

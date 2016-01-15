@@ -24,6 +24,11 @@
 {
     [super shareData:data withCompletionHandler:handler];
     
+    if (![QQApiInterface isQQInstalled]) {
+        self.handler(BUKSocialShareResultCodeNotInstallClient);
+        return;
+    }
+    
     self.oAuth = [[TencentOAuth alloc] initWithAppId:[[BUKSocialShareHelper sharedInstance] qqAppId] andDelegate:self];
     
     QQApiObject *object = nil;

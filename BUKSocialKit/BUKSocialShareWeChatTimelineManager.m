@@ -24,6 +24,11 @@ static const CGFloat kThumbnailHeight = 160.0f;
 {
     [super shareData:data withCompletionHandler:handler];
     
+    if (![WXApi isWXAppInstalled]) {
+        self.handler(BUKSocialShareResultCodeNotInstallClient);
+        return;
+    }
+    
     WXMediaMessage *message = [WXMediaMessage message];
     message.title = data.title;
     message.description = data.content;
