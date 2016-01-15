@@ -9,6 +9,7 @@
 #import "BUKSocialShareManager.h"
 #import "BUKSocialShareWeiboManager.h"
 #import "BUKSocialShareQQManager.h"
+#import "BUKSocialShareQzoneManager.h"
 #import "BUKSocialData.h"
 
 @interface BUKSocialShareManager ()
@@ -29,6 +30,9 @@
                 break;
             case BUKSocialShareTypeQQ:
                 _sharedInstance = [[BUKSocialShareQQManager alloc] init];
+                break;
+            case BUKSocialShareTypeQQZone:
+                _sharedInstance = [[BUKSocialShareQzoneManager alloc] init];
                 break;
             default:
                 break;

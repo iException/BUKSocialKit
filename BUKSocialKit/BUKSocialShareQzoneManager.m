@@ -1,36 +1,38 @@
 //
-//  BUKSocialShareQQManager.m
+//  BUKSocialShareQzoneManager.m
 //  BUKSocialKit
 //
-//  Created by Lazy on 1/14/16.
+//  Created by Lazy on 1/15/16.
 //  Copyright © 2016 Lazy. All rights reserved.
 //
 
-#import "BUKSocialShareQQManager.h"
+#import "BUKSocialShareQzoneManager.h"
 #import "BUKSocialShareHelper.h"
 #import <TencentOpenAPI/TencentApiInterface.h>
 #import <TencentOpenAPI/QQApiInterface.h>
 #import <TencentOpenAPI/TencentOAuth.h>
 
-@interface BUKSocialShareQQManager () <TencentSessionDelegate>
+@interface BUKSocialShareQzoneManager () <TencentSessionDelegate>
 
 @property (nonatomic, strong) TencentOAuth *oAuth;
 
 @end
 
-@implementation BUKSocialShareQQManager
+@implementation BUKSocialShareQzoneManager
 
 - (void)shareData:(BUKSocialData *)data withCompletionHandler:(BUKSocialShareCompletionHandler)handler
 {
     [super shareData:data withCompletionHandler:handler];
-   
+    
     self.oAuth = [[TencentOAuth alloc] initWithAppId:[[BUKSocialShareHelper sharedInstance] qqAppId] andDelegate:self];
-
+    
     QQApiObject *object = nil;
     if (data.url) {
         object = [QQApiURLObject objectWithURL:[NSURL URLWithString:data.url] title:data.title description:data.content previewImageData:UIImagePNGRepresentation(data.image) targetContentType:QQApiURLTargetTypeNews];
+        [(QQApiURLObject *)object setCflag:kQQAPICtrlFlagQZoneShareOnStart];
     } else {
         object = [QQApiImageObject objectWithData:UIImagePNGRepresentation(data.image) previewImageData:UIImagePNGRepresentation(data.image) title:data.title description:data.content];
+        [(QQApiImageObject *)object setCflag:kQQAPICtrlFlagQZoneShareOnStart];
     }
     
     SendMessageToQQReq* req = [SendMessageToQQReq reqWithContent:object];
@@ -65,6 +67,12 @@
             break;
         case EQQAPIQQNOTSUPPORTAPI_WITH_ERRORSHOW:
             code = BUKSocialShareResultCodeFaild;
+            break;
+        case EQQAPIQZONENOTSUPPORTTEXT:
+            code = BUKSocialShareResultCodeContentNotSupported;
+            break;
+        case EQQAPIQZONENOTSUPPORTIMAGE:
+            code = BUKSocialShareResultCodeContentNotSupported;
             break;
         default:
             break;

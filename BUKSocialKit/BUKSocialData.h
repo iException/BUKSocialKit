@@ -21,8 +21,9 @@ typedef NS_ENUM(NSInteger, BUKSocialShareType){
 
 @property (nonatomic, copy) NSString *title;
 @property (nonatomic, copy) NSString *content;
+@property (nonatomic, copy) NSString *url;
 @property (nonatomic, strong) UIImage *image;
 
-- (instancetype)initWithTitle:(NSString *)title content:(NSString *)content image:(UIImage *)image NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithTitle:(NSString *)title content:(NSString *)content url:(NSString *)url image:(UIImage *)image NS_DESIGNATED_INITIALIZER;
 
 @end

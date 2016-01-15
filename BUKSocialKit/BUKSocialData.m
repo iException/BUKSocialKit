@@ -10,19 +10,20 @@
 
 @implementation BUKSocialData
 
-- (instancetype)initWithTitle:(NSString *)title content:(NSString *)content image:(UIImage *)image
+- (instancetype)initWithTitle:(NSString *)title content:(NSString *)content url:(NSString *)url image:(UIImage *)image
 {
     self = [super init];
     if (self) {
         _title = title;
         _content = content;
+        _url = url;
         _image = image;
     }
     return self;
 }
 
 - (instancetype)init{
-    return [self initWithTitle:nil content:nil image:nil];
+    return [self initWithTitle:nil content:nil url:nil image:nil];
 }
 
 @end
