@@ -20,26 +20,23 @@
 
 + (BUKSocialShareManager *)managerWithType:(BUKSocialShareType)type
 {
-    static dispatch_once_t token;
-    static BUKSocialShareManager *_sharedInstance;
+    BUKSocialShareManager *manager;
     
-    dispatch_once(&token, ^{
-        switch (type) {
-            case BUKSocialShareTypeWeibo:
-                _sharedInstance = [[BUKSocialShareWeiboManager alloc] init];
-                break;
-            case BUKSocialShareTypeQQ:
-                _sharedInstance = [[BUKSocialShareQQManager alloc] init];
-                break;
-            case BUKSocialShareTypeQQZone:
-                _sharedInstance = [[BUKSocialShareQzoneManager alloc] init];
-                break;
-            default:
-                break;
-        }
-    });
+    switch (type) {
+        case BUKSocialShareTypeWeibo:
+            manager = [[BUKSocialShareWeiboManager alloc] init];
+            break;
+        case BUKSocialShareTypeQQ:
+            manager = [[BUKSocialShareQQManager alloc] init];
+            break;
+        case BUKSocialShareTypeQQZone:
+            manager = [[BUKSocialShareQzoneManager alloc] init];
+            break;
+        default:
+            break;
+    }
     
-    return _sharedInstance;
+    return manager;
 }
 
 

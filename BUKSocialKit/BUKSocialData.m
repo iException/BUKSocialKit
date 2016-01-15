@@ -26,4 +26,9 @@
     return [self initWithTitle:nil content:nil url:nil image:nil];
 }
 
++ (instancetype)dataWithTitle:(NSString *)title content:(NSString *)content url:(NSString *)url image:(UIImage *)image
+{
+    return [[BUKSocialData alloc] initWithTitle:title content:content url:url image:image];
+}
+
 @end

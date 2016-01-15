@@ -7,7 +7,7 @@
 //
 
 #import "BUKSocialShareWeiboManager.h"
-#import "libWeiboSDK/WeiboSDK.h"
+#import "WeiboSDK.h"
 #import "BUKSocialShareHelper.h"
 
 @interface BUKSocialShareWeiboManager () <WeiboSDKDelegate>
