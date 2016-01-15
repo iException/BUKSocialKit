@@ -84,9 +84,4 @@ static const CGFloat kThumbnailHeight = 160.0f;
     self.handler(code);
 }
 
-- (void)onReq:(BaseReq *)req
-{
-    
-}
-
 @end

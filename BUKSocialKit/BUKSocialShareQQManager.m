@@ -71,6 +71,12 @@
         case EQQAPIQQNOTSUPPORTAPI_WITH_ERRORSHOW:
             code = BUKSocialShareResultCodeFaild;
             break;
+        case EQQAPIQZONENOTSUPPORTTEXT:
+            code = BUKSocialShareResultCodeNoApiAuthority;
+            break;
+        case EQQAPIQZONENOTSUPPORTIMAGE:
+            code = BUKSocialShareResultCodeNoApiAuthority;
+            break;
         default:
             break;
     }

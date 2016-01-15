@@ -37,6 +37,7 @@
 - (IBAction)shareToWeibo:(id)sender {
     BUKSocialData *data = [[BUKSocialData alloc] initWithTitle:@"123" content:@"很多思考和看见伤口的健康" url:@"http://www.baixing.com" image:[UIImage imageNamed:@"sample"]];
     BUKSocialShareManager *manager = [BUKSocialShareManager managerWithType:BUKSocialShareTypeWeibo];
+    [BUKSocialShareHelper sharedInstance].manager = manager;
     [manager shareData:data withCompletionHandler:^(BUKSocialShareResultCode code) {
         NSLog(@"%@",@(code));
     }];
@@ -46,6 +47,7 @@
 - (IBAction)shareToQQ:(id)sender {
     BUKSocialData *data = [[BUKSocialData alloc] initWithTitle:@"123" content:@"很多思考和看见伤口的健康" url:@"http://baixing.com" image:[UIImage imageNamed:@"sample"]];
     BUKSocialShareManager *manager = [BUKSocialShareManager managerWithType:BUKSocialShareTypeQQ];
+    [BUKSocialShareHelper sharedInstance].manager = manager;
     [manager shareData:data withCompletionHandler:^(BUKSocialShareResultCode code) {
         NSLog(@"%@",@(code));
     }];
@@ -54,6 +56,7 @@
 - (IBAction)shareToQzone:(id)sender {
     BUKSocialData *data = [[BUKSocialData alloc] initWithTitle:@"123" content:@"非得说开了房间快乐撒进来看" url:@"http://baixing.com" image:[UIImage imageNamed:@"sample"]];
     BUKSocialShareManager *manager = [BUKSocialShareManager managerWithType:BUKSocialShareTypeQQZone];
+    [BUKSocialShareHelper sharedInstance].manager = manager;
     [manager shareData:data withCompletionHandler:^(BUKSocialShareResultCode code) {
         NSLog(@"%@",@(code));
     }];
@@ -62,6 +65,7 @@
 - (IBAction)shareToWeChat:(id)sender {
     BUKSocialData *data = [[BUKSocialData alloc] initWithTitle:@"123" content:@"非得说开了房间快乐撒进来看" url:@"http://baixing.com" image:[UIImage imageNamed:@"sample"]];
     BUKSocialShareManager *manager = [BUKSocialShareManager managerWithType:BUKSocialShareTypeWechatFriend];
+    [BUKSocialShareHelper sharedInstance].manager = manager;
     [manager shareData:data withCompletionHandler:^(BUKSocialShareResultCode code) {
         NSLog(@"%@",@(code));
     }];
@@ -71,6 +75,7 @@
 - (IBAction)shareToWeChatTimeLine:(id)sender {
     BUKSocialData *data = [[BUKSocialData alloc] initWithTitle:@"123" content:@"非得说开了房间快乐撒进来看" url:@"http://baixing.com" image:[UIImage imageNamed:@"sample"]];
     BUKSocialShareManager *manager = [BUKSocialShareManager managerWithType:BUKSocialShareTypeWechatTimeline];
+    [BUKSocialShareHelper sharedInstance].manager = manager;
     [manager shareData:data withCompletionHandler:^(BUKSocialShareResultCode code) {
         NSLog(@"%@",@(code));
     }];

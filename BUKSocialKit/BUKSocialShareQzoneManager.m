@@ -83,6 +83,7 @@
             break;
     }
     self.handler(code);
+
 }
 
 #pragma mark - TencentSessionDelegate
