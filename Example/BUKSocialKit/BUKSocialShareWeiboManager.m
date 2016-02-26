@@ -17,8 +17,8 @@
 
 @implementation BUKSocialShareWeiboManager
 
-static const CGFloat kThumbnailWidth = 120.0f;
-static const CGFloat kThumbnailHeight = 120.0f;
+static const CGFloat kThumbnailWidth = 80.0f;
+static const CGFloat kThumbnailHeight = 80.0f;
 
 - (void)shareData:(BUKSocialData *)data withCompletionHandler:(BUKSocialShareCompletionHandler)handler
 {
