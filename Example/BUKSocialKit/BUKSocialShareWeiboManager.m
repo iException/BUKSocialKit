@@ -93,7 +93,10 @@ static const CGFloat kThumbnailHeight = 80.0f;
                 code = BUKSocialShareResultCodeFaild;
                 break;
         }
-        self.handler(code);
+        
+        if (self.handler) {
+            self.handler(code);
+        }
     }
 }
 

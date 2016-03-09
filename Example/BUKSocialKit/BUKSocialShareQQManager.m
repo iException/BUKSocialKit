@@ -12,7 +12,7 @@
 #import <TencentOpenAPI/QQApiInterface.h>
 #import <TencentOpenAPI/TencentOAuth.h>
 
-@interface BUKSocialShareQQManager () <TencentSessionDelegate>
+@interface BUKSocialShareQQManager () <TencentSessionDelegate, QQApiInterfaceDelegate>
 
 @property (nonatomic, strong) TencentOAuth *oAuth;
 
@@ -28,7 +28,7 @@
         self.handler(BUKSocialShareResultCodeNotInstallClient);
         return;
     }
-    
+    // 将TencentAPI的授权登录放到这里
     self.oAuth = [[TencentOAuth alloc] initWithAppId:[[BUKSocialShareHelper sharedInstance] qqAppId] andDelegate:self];
     
     QQApiObject *object = nil;
@@ -39,71 +39,70 @@
     }
     
     SendMessageToQQReq* req = [SendMessageToQQReq reqWithContent:object];
-    QQApiSendResultCode sent = [QQApiInterface sendReq:req];
-    [self handleRequest:sent];
+    [QQApiInterface sendReq:req];
 }
 
 - (BOOL)handleOpenURL:(NSURL *)url
 {
-    return [TencentOAuth HandleOpenURL:url];
+    return [QQApiInterface handleOpenURL:url delegate:self];
 }
 
-- (void)handleRequest:(QQApiSendResultCode)sent
+- (void)handleRespResult:(NSString *)result
 {
+    NSInteger resultCode = [result integerValue];
     BUKSocialShareResultCode code = BUKSocialShareResultCodeSuccess;
-    switch (sent) {
-        case EQQAPISENDSUCESS:
+    
+    switch (resultCode) {
+        case BUKQQBaseRespResultSuccess:
             code = BUKSocialShareResultCodeSuccess;
             break;
-        case EQQAPIQQNOTINSTALLED:
-            code = BUKSocialShareResultCodeNotInstallClient;
+        case BUKQQBaseRespResultParamsError:
+            code = BUKSocialShareResultCodeArgumentsError;
             break;
-        case EQQAPIQQNOTSUPPORTAPI:
+        case BUKQQBaseRespResultGroupInvalid:
             code = BUKSocialShareResultCodeFaild;
             break;
-        case EQQAPIMESSAGECONTENTNULL:
-            code = BUKSocialShareResultCodeEmptyContent;
-            break;
-        case EQQAPIMESSAGECONTENTINVALID:
+        case BUKQQBaseRespResultUploadFail:
             code = BUKSocialShareResultCodeFaild;
             break;
-        case EQQAPIAPPNOTREGISTED:
-            code = BUKSocialShareResultCodeNotRegisted;
+        case BUKQQBaseRespResultUserCancel:
+            code = BUKSocialShareResultCodeCancel;
             break;
-        case EQQAPIAPPSHAREASYNC:
-            code = BUKSocialShareResultCodeNetworkError;
-            break;
-        case EQQAPIQQNOTSUPPORTAPI_WITH_ERRORSHOW:
+        case BUKQQBaseRespResultInternalError:
             code = BUKSocialShareResultCodeFaild;
-            break;
-        case EQQAPIQZONENOTSUPPORTTEXT:
-            code = BUKSocialShareResultCodeNoApiAuthority;
-            break;
-        case EQQAPIQZONENOTSUPPORTIMAGE:
-            code = BUKSocialShareResultCodeNoApiAuthority;
             break;
         default:
             code = BUKSocialShareResultCodeFaild;
             break;
     }
-    self.handler(code);
+    
+    if (self.handler) {
+        self.handler(code);
+    }
 }
 
 #pragma mark - TencentSessionDelegate
 
 - (void)tencentDidLogin
-{
-    
-}
+{}
 
 - (void)tencentDidNotLogin:(BOOL)cancelled
-{
-    
-}
+{}
 
 - (void)tencentDidNotNetWork
+{}
+
+#pragma mark - TencentApiInterfaceDelegate
+
+- (void)onResp:(QQBaseResp *)resp
 {
-    
+    [self handleRespResult:resp.result];
 }
+
+- (void)onReq:(QQBaseReq *)req
+{}
+
+- (void)isOnlineResponse:(NSDictionary *)response
+{}
 
 @end

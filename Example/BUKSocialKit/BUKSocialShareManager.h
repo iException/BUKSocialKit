@@ -9,6 +9,15 @@
 #import <Foundation/Foundation.h>
 #import "BUKSocialData.h"
 
+typedef NS_ENUM(NSInteger, BUKQQBaseRespResult){
+    BUKQQBaseRespResultSuccess       = 0,
+    BUKQQBaseRespResultParamsError   = -1,
+    BUKQQBaseRespResultGroupInvalid  = -2,
+    BUKQQBaseRespResultUploadFail    = -3,
+    BUKQQBaseRespResultUserCancel    = -4,
+    BUKQQBaseRespResultInternalError = -5
+};
+
 typedef NS_ENUM(NSInteger, BUKSocialShareResultCode){
     BUKSocialShareResultCodeSuccess            = 200,        //成功
     BUKSocialShareResultCodeTokenInvalid       = 400,        //授权用户token错误
