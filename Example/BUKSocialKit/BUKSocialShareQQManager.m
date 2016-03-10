@@ -60,16 +60,16 @@
             code = BUKSocialShareResultCodeArgumentsError;
             break;
         case BUKQQBaseRespResultGroupInvalid:
-            code = BUKSocialShareResultCodeFaild;
+            code = BUKSocialShareResultCodeGroupInvalid;
             break;
         case BUKQQBaseRespResultUploadFail:
-            code = BUKSocialShareResultCodeFaild;
+            code = BUKSocialShareResultCodeUploadFail;
             break;
         case BUKQQBaseRespResultUserCancel:
             code = BUKSocialShareResultCodeCancel;
             break;
         case BUKQQBaseRespResultInternalError:
-            code = BUKSocialShareResultCodeFaild;
+            code = BUKSocialShareResultCodeInternalError;
             break;
         default:
             code = BUKSocialShareResultCodeFaild;
