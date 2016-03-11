@@ -9,6 +9,15 @@
 #import <Foundation/Foundation.h>
 #import "BUKSocialData.h"
 
+typedef NS_ENUM(NSInteger, BUKQQBaseRespResult){
+    BUKQQBaseRespResultSuccess       = 0,
+    BUKQQBaseRespResultParamsError   = -1,
+    BUKQQBaseRespResultGroupInvalid  = -2,
+    BUKQQBaseRespResultUploadFail    = -3,
+    BUKQQBaseRespResultUserCancel    = -4,
+    BUKQQBaseRespResultInternalError = -5
+};
+
 typedef NS_ENUM(NSInteger, BUKSocialShareResultCode){
     BUKSocialShareResultCodeSuccess            = 200,        //成功
     BUKSocialShareResultCodeTokenInvalid       = 400,        //授权用户token错误
@@ -20,7 +29,10 @@ typedef NS_ENUM(NSInteger, BUKSocialShareResultCode){
     BUKSocialShareResultCodeCancel             = 5005,       //用户取消授权
     BUKSocialShareResultCodeNotInstallClient   = 5006,       //用户没有安装客户端
     BUKSocialShareResultCodeNotRegisted        = 5007,       //用户没有授权
-    BUKSocialShareResultCodeNoApiAuthority     = 100031      //QQ空间应用没有在QQ互联平台上申请上传图片到相册的权限
+    BUKSocialShareResultCodeNoApiAuthority     = 100031,     //QQ空间应用没有在QQ互联平台上申请上传图片到相册的权限
+    BUKSocialShareResultCodeGroupInvalid       = 150000,     //QQ群不在自己的群列表里面
+    BUKSocialShareResultCodeUploadFail         = 150001,     //QQ上传图片失败
+    BUKSocialShareResultCodeInternalError      = 150002      //QQ客户端内部处理错误
 };
 
 typedef void (^BUKSocialShareCompletionHandler)(BUKSocialShareResultCode code);

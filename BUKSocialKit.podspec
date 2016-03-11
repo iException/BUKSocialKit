@@ -1,11 +1,11 @@
 Pod::Spec.new do |s|
   s.name     = 'BUKSocialKit'
-  s.version  = '0.0.3'
+  s.version  = '0.0.5'
   s.license  = 'MIT'
   s.summary  = 'Baixing Social Share Kit'
   s.homepage = 'https://github.com/iException/BUKSocialKit'
   s.author   = { 'Lazy Clutch' => 'lr_5146@163.com' }
-  s.source   = { :git => 'https://github.com/iException/BUKSocialKit.git', :tag => '0.0.3' }
+  s.source   = { :git => 'https://github.com/iException/BUKSocialKit.git', :tag => '0.0.5' }
   s.platform = :ios, '7.0'
   s.source_files = 'BUKSocialKit/**/*.{h,m}'
   s.resource     = 'BUKSocialKit/WeiboSDK.bundle', 'BUKSocialKit/TencentOpenApi_IOS_Bundle.bundle'
