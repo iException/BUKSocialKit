@@ -19,9 +19,9 @@
 {
     [super viewDidLoad];
     
-    [[BUKSocialShareHelper sharedInstance] setWeiboAppKey:<#YOUR WEIBO APP KEY#>appSecret:<#YOUR WEIBO APP SECRET#> url:<#YOUR WEIBO CALLBACK URL#>];
-    [[BUKSocialShareHelper sharedInstance] setQQWithAppId:<#YOUR QQ APP ID#> appKey:<#YOUR QQ APP KEY#>url:<#YOUR QQ CALLBACK URL#>];
-    [[BUKSocialShareHelper sharedInstance] setWXAppId:<#YOUR WX APP ID#> appSecret:<#YOUR WX APP SECRET#> url:<#YOUR WX CALLBACK URL#>];
+    [[BUKSocialShareHelper sharedInstance] setWeiboAppKey:@"2454831345" appSecret:@"56f9b633b5821179b4ae702a82e7527a" url:@"http://www.baixing.com/a/mobile"];
+    [[BUKSocialShareHelper sharedInstance] setQQWithAppId:@"1105039495" appKey:@"2fuWb4qrmezq72yv" url:@"http://www.baixing.com/a/mobile"];
+    [[BUKSocialShareHelper sharedInstance] setWXAppId:@"wxad9d46bc30040c71" appSecret:@"a59c72c189e0a2560fdf24cf2a2d1a50" url:@"http://www.baixing.com/a/mobile"];
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
