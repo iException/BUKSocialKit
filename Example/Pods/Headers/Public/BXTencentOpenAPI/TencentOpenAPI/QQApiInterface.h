@@ -1,0 +1,1 @@
+../../../../BXTencentOpenAPI/TencentOpenAPI/Basic/TencentOpenAPI.framework/Headers/QQApiInterface.h

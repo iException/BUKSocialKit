@@ -1,0 +1,1 @@
+../../../../../BUKSocialKit/Classes/BUKSocialShareWechatFriendManager.h
