@@ -37,6 +37,12 @@
         case BUKSocialShareTypeWechatFriend:
             manager = [[BUKSocialShareWechatFriendManager alloc] init];
             break;
+        case BUKSocialShareTypeWechatFriendAppOnly:
+            manager = [[BUKSocialShareWechatFriendManager alloc] initWithAppOnly:YES];
+            break;
+        case BUKSocialShareTypeWechatTimelineAppOnly:
+            manager = [[BUKSocialShareWeChatTimelineManager alloc] initWithAppOnly:YES];
+            break;
         case BUKSocialShareTypeWechatTimeline:
             manager = [[BUKSocialShareWeChatTimelineManager alloc] init];
             break;

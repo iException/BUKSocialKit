@@ -12,7 +12,9 @@ typedef NS_ENUM(NSInteger, BUKSocialShareType){
     BUKSocialShareTypeNone = 0,
     BUKSocialShareTypeWeibo,
     BUKSocialShareTypeWechatFriend,
+    BUKSocialShareTypeWechatFriendAppOnly,
     BUKSocialShareTypeWechatTimeline,
+    BUKSocialShareTypeWechatTimelineAppOnly,
     BUKSocialShareTypeQQ,
     BUKSocialShareTypeQQZone
 };
