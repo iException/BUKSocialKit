@@ -51,7 +51,32 @@
 
 + (instancetype)dataWithTitle:(NSString *)title content:(NSString *)content url:(NSString *)url image:(UIImage *)image
 {
-    return [[BUKSocialData alloc] initWithTitle:title content:content url:url image:image];
+    BUKSocialData *socialData = [[BUKSocialData alloc] initWithTitle:title content:content url:url image:image];
+    socialData.socialDataType = BUKSocialDataTypeURL;
+    return socialData;
+}
+
++ (instancetype)urlDataWithTitle:(NSString *)title content:(NSString *)content url:(NSString *)url image:(UIImage *)image
+{
+    BUKSocialData *socialData = [[BUKSocialData alloc] initWithTitle:title content:content url:url image:image];
+    socialData.socialDataType = BUKSocialDataTypeURL;
+    return socialData;
+}
+
++ (instancetype)sourceOnlyDataWithTitle:(NSString *)title content:(NSString *)content url:(NSString *)url image:(UIImage *)image extInfo:(NSString *)extInfo
+{
+    BUKSocialData *socialData = [[BUKSocialData alloc] initWithTitle:title content:content url:url image:image];
+    socialData.socialDataType = BUKSocialDataTypeSourceOnly;
+    socialData.extInfo = extInfo;
+    return socialData;
+}
+
++ (instancetype)dataWithImage:(UIImage *)image
+{
+    BUKSocialData *socialData = [[BUKSocialData alloc] init];
+    socialData.image = image;
+    socialData.socialDataType = BUKSocialDataTypeImage;
+    return socialData;
 }
 
 @end

@@ -9,6 +9,5 @@
 #import "BUKSocialShareManager.h"
 
 @interface BUKSocialShareWeChatTimelineManager : BUKSocialShareManager
-@property (nonatomic) BOOL isAppOnly;
-- (instancetype)initWithAppOnly:(BOOL)appOnly;
+
 @end
