@@ -11,6 +11,8 @@
 #import "UIImage+Resize.h"
 #import "WeiboSDK.h"
 
+static NSInteger kMaxWeiboTextLength = 140;
+
 @interface BUKSocialShareWeiboManager () <WeiboSDKDelegate>
 
 @end
@@ -29,7 +31,11 @@ static const CGFloat kThumbnailHeight = 80.0f;
     request.scope = @"all";
     
     WBMessageObject *message = [[WBMessageObject alloc] init];
-    message.text = [data.content substringToIndex:140];
+    if (data.content.length >= kMaxWeiboTextLength) {
+        message.text = [data.content substringToIndex:kMaxWeiboTextLength];
+    } else {
+        message.text = data.content;
+    }
     
     if (data.url) {
         WBWebpageObject *webPage = [WBWebpageObject object];
