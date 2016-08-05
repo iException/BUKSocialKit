@@ -29,7 +29,7 @@ static const CGFloat kThumbnailHeight = 80.0f;
     request.scope = @"all";
     
     WBMessageObject *message = [[WBMessageObject alloc] init];
-    message.text = data.content;
+    message.text = [data.content substringToIndex:140];
     
     if (data.url) {
         WBWebpageObject *webPage = [WBWebpageObject object];
