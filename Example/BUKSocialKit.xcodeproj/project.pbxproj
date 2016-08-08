@@ -304,6 +304,7 @@
 				TargetAttributes = {
 					630CFCAA1C476CD400BEBD59 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 74UX6D4SCA;
 					};
 				};
 			};
@@ -469,6 +470,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 74UX6D4SCA;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/BUKSocialKit",
@@ -493,6 +495,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 74UX6D4SCA;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/BUKSocialKit",

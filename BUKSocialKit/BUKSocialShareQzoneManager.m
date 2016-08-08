@@ -8,9 +8,8 @@
 
 #import "BUKSocialShareQzoneManager.h"
 #import "BUKSocialShareHelper.h"
-#import <TencentOpenAPI/TencentApiInterface.h>
-#import <TencentOpenAPI/QQApiInterface.h>
-#import <TencentOpenAPI/TencentOAuth.h>
+#import <BXTencentOpenAPI/TencentOpenAPI/QQApiInterface.h>
+#import <BXTencentOpenAPI/TencentOpenAPI/TencentOAuth.h>
 
 @interface BUKSocialShareQzoneManager () <TencentSessionDelegate, QQApiInterfaceDelegate>
 
