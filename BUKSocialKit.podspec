@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
   s.vendored_frameworks = 'BUKSocialkit/TencentOpenAPI.framework'
   s.requires_arc = true
 
-  other_ldflags = '-l\"WeChatSDK\" ' + '-l\"WeiboSDK\" ' + '-l\"iconv\" '+ '-l\"sqlite3\" '+ '-l\"stdc++\" '+ '-l\"z\" ' + '-framework \"CoreGraphics\" ' + '-framework \"CoreTelephony\" ' + '-framework \"CoreText\" ' + '-framework \"Foundation\" ' + '-framework \"ImageIO\" ' + '-framework \"QuartzCore\" ' + '-framework \"Security\" ' + '-framework \"SystemConfiguration\" ' + '-framework \"TencentOpenAPI\" ' + '-framework \"UIKit\" ' + '-Objc'
+  other_ldflags = '-Objc'
 
   s.xcconfig = {'OTHER_LDFLAGS' => other_ldflags}
 end
