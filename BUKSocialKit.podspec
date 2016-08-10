@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
   s.vendored_frameworks = 'BUKSocialkit/TencentOpenAPI.framework'
   s.requires_arc = true
 
-  other_ldflags = '-Objc'
+  other_ldflags = '-ObjC'
 
   s.xcconfig = {'OTHER_LDFLAGS' => other_ldflags}
 end
