@@ -58,6 +58,6 @@ typedef NS_ENUM(NSInteger, BUKSocialDataType) {
 @property (nonatomic) BUKSocialDataType socialDataType;
 
 
-- (instancetype)initWithTitle:(NSString *)title content:(NSString *)content url:(NSString *)url image:(UIImage *)image __attribute__((deprecated));
-+ (instancetype)dataWithTitle:(NSString *)title content:(NSString *)content url:(NSString *)url image:(UIImage *)image __attribute__((deprecated));
+- (instancetype)initWithTitle:(NSString *)title content:(NSString *)content url:(NSString *)url image:(UIImage *)image;
++ (instancetype)dataWithTitle:(NSString *)title content:(NSString *)content url:(NSString *)url image:(UIImage *)image;
 @end
