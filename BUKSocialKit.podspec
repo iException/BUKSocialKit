@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
   s.source   = { :git => 'https://github.com/iException/BUKSocialKit.git', :tag => '0.0.5' }
   s.platform = :ios, '7.0'
   s.source_files = 'BUKSocialKit/**/*.{h,m}'
-  s.resource     = 'BUKSocialKit/WeiboSDK.bundle', 'BUKSocialKit/TencentOpenApi_IOS_Bundle.bundle'
+  s.resources     = ['BUKSocialKit/WeiboSDK.bundle', 'BUKSocialKit/TencentOpenApi_IOS_Bundle.bundle']
   s.frameworks = 'UIKit', 'Foundation', 'ImageIO', 'SystemConfiguration', 'CoreText', 'QuartzCore', 'Security', 'Foundation', 'CoreGraphics','CoreTelephony'
   s.libraries = 'sqlite3', 'z', 'iconv', 'stdc++'
   s.vendored_libraries  = 'BUKSocialkit/libWeiboSDK.a', 'BUKSocialkit/libWeChatSDK.a'
