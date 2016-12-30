@@ -57,7 +57,7 @@
 + (instancetype)dataWithTitle:(NSString *)title content:(NSString *)content url:(NSString *)url image:(UIImage *)image
 {
     BUKSocialData *socialData = [[BUKSocialData alloc] initWithTitle:title content:content url:url image:image];
-    socialData.socialDataType = BUKSocialDataTypeURL;
+    socialData.socialDataType = url.length > 0 ? BUKSocialDataTypeURL : BUKSocialDataTypeImage;
     return socialData;
 }
 @end
