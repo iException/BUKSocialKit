@@ -8,8 +8,8 @@
 
 #import "BUKSocialShareHelper.h"
 #import "BUKSocialShareManager.h"
-#import "WeiboSDK.h"
-#import "WXApi.h"
+#import <WeiboSDK/WeiboSDK.h>
+#import <WechatOpenSDK/WXApi.h>
 
 @interface BUKSocialShareHelper ()
 

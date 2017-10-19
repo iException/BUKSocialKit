@@ -9,7 +9,7 @@
 #import "BUKSocialShareWechatFriendManager.h"
 #import "UIImage+ImageCompress.h"
 #import "UIImage+Resize.h"
-#import "WXApi.h"
+#import <WechatOpenSDK/WXApi.h>
 
 @interface BUKSocialShareWechatFriendManager () <WXApiDelegate>
 

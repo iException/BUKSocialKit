@@ -9,7 +9,7 @@
 #import "BUKSocialShareWeiboManager.h"
 #import "BUKSocialShareHelper.h"
 #import "UIImage+Resize.h"
-#import "WeiboSDK.h"
+#import <WeiboSDK/WeiboSDK.h>
 
 static NSInteger kMaxWeiboTextLength = 140;
 
