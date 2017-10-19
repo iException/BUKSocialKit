@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3DFA8F84D4AAAD6B7CEB67A5 /* libPods-BUKSocialKit_Example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B2F2329164CFB53E17A0C98B /* libPods-BUKSocialKit_Example.a */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -21,8 +20,9 @@
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
+		6DA902A8A50564FD7B6F0C07 /* Pods_BUKSocialKit_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3665F9E2D2B0EC85624DAFBE /* Pods_BUKSocialKit_Example.framework */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
-		DEFB2E1DC69EC081E8C99E63 /* libPods-BUKSocialKit_Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 47367C82306148DD81422557 /* libPods-BUKSocialKit_Tests.a */; };
+		8F636CC22B9B0EC0CD1C55C7 /* Pods_BUKSocialKit_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D17E41C510E32257842C7B3F /* Pods_BUKSocialKit_Tests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,8 +36,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4364C302AE1E4F938B7861E9 /* Pods-BUKSocialKit_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BUKSocialKit_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BUKSocialKit_Tests/Pods-BUKSocialKit_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		47367C82306148DD81422557 /* libPods-BUKSocialKit_Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BUKSocialKit_Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3665F9E2D2B0EC85624DAFBE /* Pods_BUKSocialKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BUKSocialKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E28F24B9F066F6D8CA3B4D2 /* Pods-BUKSocialKit_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BUKSocialKit_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BUKSocialKit_Tests/Pods-BUKSocialKit_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		43457583090AC300638822C7 /* Pods-BUKSocialKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BUKSocialKit_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BUKSocialKit_Example/Pods-BUKSocialKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		464A21FCC1F8BCF69EC08E62 /* Pods-BUKSocialKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BUKSocialKit_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-BUKSocialKit_Example/Pods-BUKSocialKit_Example.release.xcconfig"; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* BUKSocialKit_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BUKSocialKit_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -57,14 +59,12 @@
 		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
-		629E21E44F7470C7C72A4D99 /* Pods-BUKSocialKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BUKSocialKit_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-BUKSocialKit_Example/Pods-BUKSocialKit_Example.release.xcconfig"; sourceTree = "<group>"; };
 		6CE0C27A0A0A00EFA8B47885 /* BUKSocialKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = BUKSocialKit.podspec; path = ../BUKSocialKit.podspec; sourceTree = "<group>"; };
+		84135BAB5C83D1B44F007287 /* Pods-BUKSocialKit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BUKSocialKit_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BUKSocialKit_Tests/Pods-BUKSocialKit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		96C96249D6679252AC53F0D5 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		B2F2329164CFB53E17A0C98B /* libPods-BUKSocialKit_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BUKSocialKit_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		CD4B0B0723CB6C5E967F5724 /* Pods-BUKSocialKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BUKSocialKit_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BUKSocialKit_Example/Pods-BUKSocialKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		D17E41C510E32257842C7B3F /* Pods_BUKSocialKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BUKSocialKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEC3A40F063514456DA2C9FF /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		F3A9081D8CF5EE25CF359799 /* Pods-BUKSocialKit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BUKSocialKit_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BUKSocialKit_Tests/Pods-BUKSocialKit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,7 +75,7 @@
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
-				3DFA8F84D4AAAD6B7CEB67A5 /* libPods-BUKSocialKit_Example.a in Frameworks */,
+				6DA902A8A50564FD7B6F0C07 /* Pods_BUKSocialKit_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,20 +86,20 @@
 				6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */,
 				6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */,
-				DEFB2E1DC69EC081E8C99E63 /* libPods-BUKSocialKit_Tests.a in Frameworks */,
+				8F636CC22B9B0EC0CD1C55C7 /* Pods_BUKSocialKit_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1CFA467CDC0C2145FCCEAC16 /* Pods */ = {
+		4E30F245C979CAA2EAE72643 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				CD4B0B0723CB6C5E967F5724 /* Pods-BUKSocialKit_Example.debug.xcconfig */,
-				629E21E44F7470C7C72A4D99 /* Pods-BUKSocialKit_Example.release.xcconfig */,
-				F3A9081D8CF5EE25CF359799 /* Pods-BUKSocialKit_Tests.debug.xcconfig */,
-				4364C302AE1E4F938B7861E9 /* Pods-BUKSocialKit_Tests.release.xcconfig */,
+				43457583090AC300638822C7 /* Pods-BUKSocialKit_Example.debug.xcconfig */,
+				464A21FCC1F8BCF69EC08E62 /* Pods-BUKSocialKit_Example.release.xcconfig */,
+				84135BAB5C83D1B44F007287 /* Pods-BUKSocialKit_Tests.debug.xcconfig */,
+				3E28F24B9F066F6D8CA3B4D2 /* Pods-BUKSocialKit_Tests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -112,7 +112,7 @@
 				6003F5B5195388D20070C39A /* Tests */,
 				6003F58C195388D20070C39A /* Frameworks */,
 				6003F58B195388D20070C39A /* Products */,
-				1CFA467CDC0C2145FCCEAC16 /* Pods */,
+				4E30F245C979CAA2EAE72643 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -132,8 +132,8 @@
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F591195388D20070C39A /* UIKit.framework */,
 				6003F5AF195388D20070C39A /* XCTest.framework */,
-				B2F2329164CFB53E17A0C98B /* libPods-BUKSocialKit_Example.a */,
-				47367C82306148DD81422557 /* libPods-BUKSocialKit_Tests.a */,
+				3665F9E2D2B0EC85624DAFBE /* Pods_BUKSocialKit_Example.framework */,
+				D17E41C510E32257842C7B3F /* Pods_BUKSocialKit_Tests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -200,12 +200,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6003F5BF195388D20070C39A /* Build configuration list for PBXNativeTarget "BUKSocialKit_Example" */;
 			buildPhases = (
-				B1B139EFAA7BBA7974DD3A2F /* Check Pods Manifest.lock */,
+				0CAE1F35DCA014C7E91F2D30 /* [CP] Check Pods Manifest.lock */,
 				6003F586195388D20070C39A /* Sources */,
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
-				6CC0B05BBBA40ED4EDAF5DDE /* Embed Pods Frameworks */,
-				83EB6F078C8B90BE38745178 /* Copy Pods Resources */,
+				15982C109EE9CC1A1B901066 /* [CP] Embed Pods Frameworks */,
+				5A12B316DD088F2661A4E4EF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -220,12 +220,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6003F5C2195388D20070C39A /* Build configuration list for PBXNativeTarget "BUKSocialKit_Tests" */;
 			buildPhases = (
-				5C12CB8B7715BFC5CBEFFBD1 /* Check Pods Manifest.lock */,
+				CDD64264F1E46094C602C24A /* [CP] Check Pods Manifest.lock */,
 				6003F5AA195388D20070C39A /* Sources */,
 				6003F5AB195388D20070C39A /* Frameworks */,
 				6003F5AC195388D20070C39A /* Resources */,
-				C4E136E7D67C767B80E60F12 /* Embed Pods Frameworks */,
-				D7B68E9D0082D56B56E822DE /* Copy Pods Resources */,
+				C193FA7F45F82938B00AE44D /* [CP] Embed Pods Frameworks */,
+				A4D4EA5288E4333AAB7C6620 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -293,29 +293,32 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		5C12CB8B7715BFC5CBEFFBD1 /* Check Pods Manifest.lock */ = {
+		0CAE1F35DCA014C7E91F2D30 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BUKSocialKit_Example-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		6CC0B05BBBA40ED4EDAF5DDE /* Embed Pods Frameworks */ = {
+		15982C109EE9CC1A1B901066 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -323,44 +326,47 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BUKSocialKit_Example/Pods-BUKSocialKit_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		83EB6F078C8B90BE38745178 /* Copy Pods Resources */ = {
+		5A12B316DD088F2661A4E4EF /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-BUKSocialKit_Example/Pods-BUKSocialKit_Example-resources.sh",
+				"${PODS_ROOT}/WeiboSDK/libWeiboSDK/WeiboSDK.bundle",
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BUKSocialKit_Example/Pods-BUKSocialKit_Example-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B1B139EFAA7BBA7974DD3A2F /* Check Pods Manifest.lock */ = {
+		A4D4EA5288E4333AAB7C6620 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BUKSocialKit_Tests/Pods-BUKSocialKit_Tests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C4E136E7D67C767B80E60F12 /* Embed Pods Frameworks */ = {
+		C193FA7F45F82938B00AE44D /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -368,19 +374,22 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BUKSocialKit_Tests/Pods-BUKSocialKit_Tests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D7B68E9D0082D56B56E822DE /* Copy Pods Resources */ = {
+		CDD64264F1E46094C602C24A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BUKSocialKit_Tests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BUKSocialKit_Tests/Pods-BUKSocialKit_Tests-resources.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -509,7 +518,7 @@
 		};
 		6003F5C0195388D20070C39A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CD4B0B0723CB6C5E967F5724 /* Pods-BUKSocialKit_Example.debug.xcconfig */;
+			baseConfigurationReference = 43457583090AC300638822C7 /* Pods-BUKSocialKit_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -529,7 +538,7 @@
 		};
 		6003F5C1195388D20070C39A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 629E21E44F7470C7C72A4D99 /* Pods-BUKSocialKit_Example.release.xcconfig */;
+			baseConfigurationReference = 464A21FCC1F8BCF69EC08E62 /* Pods-BUKSocialKit_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -549,7 +558,7 @@
 		};
 		6003F5C3195388D20070C39A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F3A9081D8CF5EE25CF359799 /* Pods-BUKSocialKit_Tests.debug.xcconfig */;
+			baseConfigurationReference = 84135BAB5C83D1B44F007287 /* Pods-BUKSocialKit_Tests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -573,7 +582,7 @@
 		};
 		6003F5C4195388D20070C39A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4364C302AE1E4F938B7861E9 /* Pods-BUKSocialKit_Tests.release.xcconfig */;
+			baseConfigurationReference = 3E28F24B9F066F6D8CA3B4D2 /* Pods-BUKSocialKit_Tests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (

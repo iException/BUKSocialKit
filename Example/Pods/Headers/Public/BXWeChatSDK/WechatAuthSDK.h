@@ -1,1 +1,0 @@
-../../../BXWeChatSDK/WeChatSDK/WechatAuthSDK.h

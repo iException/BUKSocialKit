@@ -1,11 +1,10 @@
-#use_frameworks!
+platform :ios, '8.0'
+use_frameworks!
 
-target 'BUKSocialKit_Example', :exclusive => true do
-  pod 'BUKSocialKit', :path => '../'
-end
-
-target 'BUKSocialKit_Tests', :exclusive => true do
+target 'BUKSocialKit_Example' do
   pod 'BUKSocialKit', :path => '../'
 
-  
+  target 'BUKSocialKit_Tests' do
+    inherit! :search_paths
+  end
 end

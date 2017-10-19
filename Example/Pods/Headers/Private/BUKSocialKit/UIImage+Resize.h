@@ -1,1 +1,0 @@
-../../../../../BUKSocialKit/Classes/UIImage+Resize.h

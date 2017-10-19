@@ -7,7 +7,7 @@
 //
 
 #import "BUKViewController.h"
-#import <BUKSocialKit.h>
+#import <BUKSocialKit/BUKSocialKit.h>
 
 @interface BUKViewController ()
 

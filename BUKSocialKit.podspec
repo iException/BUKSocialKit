@@ -9,7 +9,8 @@ Pod::Spec.new do |s|
   s.platform = :ios, '7.0'
   s.source_files = 'BUKSocialKit/**/*.{h,m}'
   s.requires_arc = true
+  s.static_framework = true
   s.dependency 'BXTencentOpenAPI'
-  s.dependency 'BXWeChatSDK'
+  s.dependency 'WechatOpenSDK'
   s.dependency 'WeiboSDK'
 end
