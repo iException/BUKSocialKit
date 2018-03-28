@@ -3,10 +3,8 @@ PODS:
     - BXTencentOpenAPI
     - WechatOpenSDK
     - WeiboSDK
-  - BXTencentOpenAPI (2.9.5):
-    - BXTencentOpenAPI/Basic (= 2.9.5)
-  - BXTencentOpenAPI/Basic (2.9.5)
-  - WechatOpenSDK (1.8.0)
+  - BXTencentOpenAPI (3.3.0)
+  - WechatOpenSDK (1.8.1)
   - WeiboSDK (3.1.3)
 
 DEPENDENCIES:
@@ -17,11 +15,11 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  BUKSocialKit: 25ded06befd733cece080b337d871cc8e38206dd
-  BXTencentOpenAPI: 96d941aacfde20adb3ebac6460cbbbea647ff08d
-  WechatOpenSDK: 0ee07a8d492299d3e47372a33da5af26524a7576
+  BUKSocialKit: f355a2834e889101a3d04ba77243af988bfe3910
+  BXTencentOpenAPI: 6f00ea4f168ea965c2e5e25b836e740b91aa6919
+  WechatOpenSDK: 491d965d79335070328571d3e79f714549e79a5e
   WeiboSDK: acb067053668102cf07d01aa7604350162c2e466
 
 PODFILE CHECKSUM: 20c772895d6eb7ec36c8d19cdd7dcb4f4b896a85
 
-COCOAPODS: 1.4.0.beta.1
+COCOAPODS: 1.4.0

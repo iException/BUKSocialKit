@@ -19,7 +19,7 @@ typedef NS_ENUM(NSInteger, BUKSocialShareType){
 
 
 /**
- * BUKSocialDataTypeURL  一个带有标题， 描述， 缩略图的socialdata
+ * BUKSocialDataTypeURL  一个带有标题， 描述， 缩略图的socialdata；特别的，如果 `additionalInfo` 里存在微信小程序字段，则优先表现成微信小程序
  * BUKSocialDataTypeImage  一个只有图片的socialdata
  * BUKSocialDataTypeSourceOnly  一个只能在分享来源app中打开的socialdata
  */
@@ -28,6 +28,9 @@ typedef NS_ENUM(NSInteger, BUKSocialDataType) {
     BUKSocialDataTypeImage,
     BUKSocialDataTypeSourceOnly
 };
+
+extern NSString *const BUKSocialDataWeChatMiniProgramUsernameKey;
+extern NSString *const BUKSocialDataWeChatMiniProgramPathKey;
 
 @interface BUKSocialData : NSObject
 
@@ -51,6 +54,12 @@ typedef NS_ENUM(NSInteger, BUKSocialDataType) {
  * 详细方法见文档： https://developer.apple.com/library/ios/qa/qa1587/_index.html
  */
 @property (nonatomic, copy) NSString *extInfo;
+
+/**
+ * 上述属性没法覆盖一些特殊需求，比如微信小程序。
+ * 此字典存储所有额外属性，用于特别需求的定制。
+ */
+@property (nonatomic, copy) NSDictionary<NSString *, id> *additionalInfo;
 
 /**
  * 分享类型， 默认为BUKSocialDataTypeURL

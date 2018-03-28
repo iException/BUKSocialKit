@@ -7,6 +7,10 @@
 //
 
 #import "BUKSocialData.h"
+
+NSString *const BUKSocialDataWeChatMiniProgramUsernameKey = @"WeChatMiniProgramUsername";
+NSString *const BUKSocialDataWeChatMiniProgramPathKey = @"WeChatMiniProgramPath";
+
 @interface BUKSocialData () <NSCoding>
 @end
 

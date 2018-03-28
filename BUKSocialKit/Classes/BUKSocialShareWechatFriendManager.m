@@ -37,9 +37,22 @@ static const CGFloat kThumbnailHeight = 80.0f;
         case BUKSocialDataTypeURL: {
             message.title = data.title;
             message.description = data.content;
-            WXWebpageObject *object = [WXWebpageObject object];
-            object.webpageUrl = data.url;
-            message.mediaObject = object;
+            NSString *miniProgramUsername = data.additionalInfo[BUKSocialDataWeChatMiniProgramUsernameKey];
+            NSString *miniProgramPath = data.additionalInfo[BUKSocialDataWeChatMiniProgramPathKey];
+            if (miniProgramUsername.length > 0 && miniProgramPath.length > 0) {
+                WXMiniProgramObject *object = [WXMiniProgramObject object];
+                object.userName = miniProgramUsername;
+                object.path = miniProgramPath;
+                object.webpageUrl = data.url;
+                object.hdImageData = UIImagePNGRepresentation([data.image resizedImageToSize:CGSizeMake(128.0f, 128.0f)]);
+                object.withShareTicket = YES;
+                object.miniProgramType = WXMiniProgramTypeRelease;
+                message.mediaObject = object;
+            } else {
+                WXWebpageObject *object = [WXWebpageObject object];
+                object.webpageUrl = data.url;
+                message.mediaObject = object;
+            }
             break;
         }
         case BUKSocialDataTypeImage: {

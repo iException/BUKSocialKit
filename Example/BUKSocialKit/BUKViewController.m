@@ -32,7 +32,7 @@
 }
 
 - (IBAction)shareToWeibo:(id)sender {
-    BUKSocialData *data = [[BUKSocialData alloc] initWithTitle:@"123" content:@"很多思考和看见伤口的健康" url:@"http://www.baixing.com" image:[UIImage imageNamed:@"sample"]];
+    BUKSocialData *data = [[BUKSocialData alloc] initWithTitle:@"百姓网" content:@"如果用户没有安装新浪微博客户端，SDK 会在应用内唤起一个网页用来分享。有一定几率用户登录后微博网页报错。即便没报错，在发布的内容里也会把链接、图片全都扔掉。。。" url:@"http://www.baixing.com" image:[UIImage imageNamed:@"sample"]];
     BUKSocialShareManager *manager = [BUKSocialShareManager managerWithType:BUKSocialShareTypeWeibo];
     [BUKSocialShareHelper sharedInstance].manager = manager;
     [manager shareData:data withCompletionHandler:^(BUKSocialShareResultCode code) {
