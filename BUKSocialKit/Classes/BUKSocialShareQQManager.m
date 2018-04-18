@@ -32,9 +32,9 @@
     
     QQApiObject *object = nil;
     if (data.url) {
-        object = [QQApiURLObject objectWithURL:[NSURL URLWithString:data.url] title:data.title description:data.content previewImageData:UIImagePNGRepresentation(data.image) targetContentType:QQApiURLTargetTypeNews];
+        object = [QQApiURLObject objectWithURL:[NSURL URLWithString:data.url] title:data.title description:data.content previewImageData:UIImageJPEGRepresentation(data.image, 0.8f) targetContentType:QQApiURLTargetTypeNews];
     } else {
-        object = [QQApiImageObject objectWithData:UIImagePNGRepresentation(data.image) previewImageData:UIImagePNGRepresentation(data.image) title:data.title description:data.content];
+        object = [QQApiImageObject objectWithData:UIImageJPEGRepresentation(data.image, 0.8f) previewImageData:UIImageJPEGRepresentation(data.image, 0.8f) title:data.title description:data.content];
     }
     
     SendMessageToQQReq* req = [SendMessageToQQReq reqWithContent:object];

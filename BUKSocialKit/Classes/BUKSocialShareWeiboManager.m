@@ -43,11 +43,11 @@ static const CGFloat kThumbnailHeight = 80.0f;
         webPage.webpageUrl = data.url;
         webPage.title = data.title;
         webPage.description = data.content;
-        webPage.thumbnailData = UIImagePNGRepresentation([data.image resizedImageToSize:CGSizeMake(kThumbnailWidth, kThumbnailHeight)]);
+        webPage.thumbnailData = UIImageJPEGRepresentation([data.image resizedImageToSize:CGSizeMake(kThumbnailWidth, kThumbnailHeight)], 1.0f);
         message.mediaObject = webPage;
     } else {
         WBImageObject *image = [WBImageObject object];
-        image.imageData = UIImagePNGRepresentation(data.image);
+        image.imageData = UIImageJPEGRepresentation(data.image, 0.8f);
         message.imageObject = image;
     }
     

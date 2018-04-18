@@ -44,7 +44,7 @@ static const CGFloat kThumbnailHeight = 80.0f;
         }
         case BUKSocialDataTypeImage: {
             WXImageObject *object = [WXImageObject object];
-            object.imageData = UIImagePNGRepresentation(data.image);
+            object.imageData = UIImageJPEGRepresentation(data.image, 0.8f);
             message.mediaObject = object;
             break;
         }

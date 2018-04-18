@@ -44,7 +44,7 @@ static const CGFloat kThumbnailHeight = 80.0f;
                 object.userName = miniProgramUsername;
                 object.path = miniProgramPath;
                 object.webpageUrl = data.url;
-                object.hdImageData = UIImagePNGRepresentation([data.image resizedImageToSize:CGSizeMake(160.0f, 128.0f)]);
+                object.hdImageData = UIImageJPEGRepresentation(data.image, 0.8f);
                 object.withShareTicket = YES;
                 object.miniProgramType = WXMiniProgramTypeRelease;
                 message.mediaObject = object;
@@ -57,7 +57,7 @@ static const CGFloat kThumbnailHeight = 80.0f;
         }
         case BUKSocialDataTypeImage: {
             WXImageObject *object = [WXImageObject object];
-            object.imageData = UIImagePNGRepresentation(data.image);
+            object.imageData = UIImageJPEGRepresentation(data.image, 0.8f);
             message.mediaObject = object;
             break;
         }
